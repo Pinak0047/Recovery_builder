@@ -12,6 +12,7 @@ jobs:
 
        - name: remove pkg and setting repo
          run: |
+            sudo apt install python2
             sudo apt update && sudo apt install wget zip
             wget -qO - https://github.com/SA-17/Recovery_builder/raw/main/scripts/cleanup.sh  | bash
             sudo -E apt-get -qq update
